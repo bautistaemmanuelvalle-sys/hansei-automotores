@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HANSEI AUTOMOTORES — Toyota Premium Argentina</title>
+<meta name="description" content="No vendemos autos. Seleccionamos los mejores. Concesionaria oficial de Toyota usados seleccionados y 0km. Filosofía japonesa, calidad premium.">
+<meta name="theme-color" content="#0D0D0D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Inter:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="header__inner container">
+    <a href="#inicio" class="brand">HANSEI <span>AUTOMOTORES</span></a>
+
+    <nav class="nav" id="nav">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#filosofia">Filosofía</a>
+      <a href="#tasacion">Tasación</a>
+      <a href="#financiacion">Financiación</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto" class="nav__cta">Contactar</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="hero__kanji" aria-hidden="true">反省</div>
+  <div class="container hero__inner">
+    <p class="eyebrow">Toyota · Usados Seleccionados · 0 km</p>
+    <h1 class="hero__title">HANSEI<br><span>AUTOMOTORES</span></h1>
+    <p class="hero__lead"><strong>No vendemos autos.</strong> Seleccionamos los mejores.</p>
+    <div class="hero__cta">
+      <a href="#catalogo" class="btn btn--primary">Ver Vehículos</a>
+      <a href="#tasacion" class="btn btn--ghost">Tasá tu Vehículo</a>
+    </div>
+  </div>
+  <div class="hero__scroll">Scroll</div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats">
+  <div class="container stats__grid">
+    <div class="stat"><span class="stat__num">+200</span><span class="stat__label">Vehículos entregados</span></div>
+    <div class="stat"><span class="stat__num">100%</span><span class="stat__label">Certificados</span></div>
+    <div class="stat"><span class="stat__num">Toyota</span><span class="stat__label">Especialistas</span></div>
+    <div class="stat"><span class="stat__num">0km</span><span class="stat__label">y Usados seleccionados</span></div>
+  </div>
+</section>
+
+<!-- ============ CATALOGO ============ -->
+<section class="section" id="catalogo">
+  <div class="container">
+    <p class="eyebrow">Catálogo</p>
+    <h2 class="section__title">Vehículos Seleccionados</h2>
+    <p class="section__lead">Cada vehículo fue cuidadosamente seleccionado bajo la filosofía Hansei, priorizando calidad, transparencia y confianza.</p>
+
+    <div class="filters" id="filters">
+      <button class="filter active" data-filter="todos">Todos</button>
+      <button class="filter" data-filter="0km">Toyota 0 km</button>
+      <button class="filter" data-filter="usado">Usados Seleccionados</button>
+      <button class="filter" data-filter="suv">SUV</button>
+      <button class="filter" data-filter="pickup">Pickups</button>
+      <button class="filter" data-filter="sedan">Sedanes</button>
+      <button class="filter" data-filter="hibrido">Híbridos</button>
+    </div>
+
+    <div class="catalog-grid" id="catalogGrid">
+      <!-- Vehicle card 1 -->
+      <article class="car-card" data-cat="usado suv">
+        <div class="car-card__media">
+          <span class="car-card__tag">Seleccionado</span>
+          <span class="car-card__brand">VOLKSWAGEN</span>
+        </div>
+        <div class="car-card__body">
+          <h3>Taos 2024</h3>
+          <p class="car-card__spec">Highline · SUV · Automático</p>
+          <p class="car-card__spec">2024 · 35.000 km · Nafta</p>
+          <p class="car-card__price">$42.000.000</p>
+          <a href="#" class="car-card__link">Ver vehículo →</a>
+        </div>
+      </article>
+
+      <!-- Vehicle card 2 (example fichado) -->
+      <article class="car-card" data-cat="0km suv">
+        <div class="car-card__media">
+          <span class="car-card__tag">0 km</span>
+          <span class="car-card__brand">TOYOTA</span>
+        </div>
+        <div class="car-card__body">
+          <h3>Land Cruiser Prado</h3>
+          <p class="car-card__spec">VXL · Automático · 4×4</p>
+          <p class="car-card__spec">2025 · 0 km · Diesel</p>
+          <p class="car-card__price">USD 95.000</p>
+          <a href="#ficha" class="car-card__link">Ver vehículo →</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="catalog-empty" id="catalogEmpty" hidden>
+      <p>¿Buscás algo específico?</p>
+      <a class="btn btn--primary" href="https://api.whatsapp.com/send/?phone=5491169024795&text=Hola%20Norberto%2C%20estoy%20buscando%20un%20veh%C3%ADculo%20y%20quiero%20consultar%20disponibilidad.&type=phone_number&app_absent=0" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FICHA DE VEHÍCULO ============ -->
+<section class="section section--alt" id="ficha">
+  <div class="container ficha">
+    <p class="eyebrow">Ficha de Vehículo</p>
+    <h2 class="section__title">Toyota Land Cruiser Prado</h2>
+    <p class="section__lead">VXL · Automático · 4×4 · 2025 · 0 km</p>
+
+    <div class="ficha__grid">
+      <div class="ficha__specs">
+        <h3>Especificaciones Técnicas</h3>
+        <dl class="spec-list">
+          <div><dt>Marca</dt><dd>Toyota</dd></div>
+          <div><dt>Modelo</dt><dd>Land Cruiser Prado</dd></div>
+          <div><dt>Versión</dt><dd>VXL</dd></div>
+          <div><dt>Año</dt><dd>2025</dd></div>
+          <div><dt>Kilómetros</dt><dd>0 km</dd></div>
+          <div><dt>Motor</dt><dd>3.0 TD 4 cil.</dd></div>
+          <div><dt>Transmisión</dt><dd>Automática 6 vel.</dd></div>
+          <div><dt>Tracción</dt><dd>4×4</dd></div>
+          <div><dt>Combustible</dt><dd>Diesel</dd></div>
+          <div><dt>Color</dt><dd>Negro Obsidiana</dd></div>
+        </dl>
+
+        <h3>Equipamiento Premium</h3>
+        <dl class="spec-list">
+          <div><dt>Pantalla multimedia</dt><dd>9" Touch</dd></div>
+          <div><dt>Asientos</dt><dd>Cuero premium</dd></div>
+          <div><dt>Climatizador</dt><dd>Tri-zona</dd></div>
+          <div><dt>Sunroof</dt><dd>Eléctrico panorámico</dd></div>
+          <div><dt>Seguridad</dt><dd>8 Airbags · ABS · ESP</dd></div>
+          <div><dt>Cámara</dt><dd>360° + sensores</dd></div>
+        </dl>
+
+        <h3>Certificación HANSEI</h3>
+        <dl class="spec-list">
+          <div><dt>Estado</dt><dd>Impecable</dd></div>
+          <div><dt>Garantía</dt><dd>Toyota de fábrica</dd></div>
+          <div><dt>Ubicación</dt><dd>Argentina</dd></div>
+        </dl>
+      </div>
+
+      <aside class="ficha__price-card">
+        <p class="ficha__price-label">Precio</p>
+        <p class="ficha__price">USD 95.000</p>
+        <a class="btn btn--primary btn--block" href="https://wa.me/5491169024795?text=Hola%2C%20me%20interesa%20el%20Land%20Cruiser%20Prado%202025" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+        <a class="btn btn--ghost btn--block" href="#contacto">Reservar Vehículo</a>
+        <a class="btn btn--ghost btn--block" href="#financiacion">Solicitar Financiación</a>
+        <ul class="ficha__badges">
+          <li>✦ Vehículo certificado por HANSEI</li>
+          <li>✦ Documentación en regla</li>
+          <li>✦ Atención personalizada</li>
+          <li>✦ Sin cargos ocultos</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FILOSOFÍA ============ -->
+<section class="section section--dark" id="filosofia">
+  <div class="hero__kanji hero__kanji--right" aria-hidden="true">反省</div>
+  <div class="container">
+    <p class="eyebrow">Nuestra Filosofía</p>
+    <h2 class="section__title">El significado de Hansei</h2>
+    <p class="section__lead">
+      "Hansei" (反省) es un concepto profundamente arraigado en la cultura japonesa.
+      Representa la práctica de la reflexión continua, el aprendizaje y la mejora constante.
+    </p>
+    <p class="section__lead">
+      En HANSEI AUTOMOTORES, adoptamos esta filosofía como principio rector.
+      Cada vehículo que ofrecemos es el resultado de un proceso riguroso de evaluación, selección y mejora.
+    </p>
+    <p class="section__quote">No competimos por precio. Competimos por confianza.</p>
+
+    <div class="pillars">
+      <div class="pillar"><span class="pillar__num">01</span><h3>Reflexión</h3><p>Analizamos cada vehículo con criterio riguroso antes de ofrecerlo.</p></div>
+      <div class="pillar"><span class="pillar__num">02</span><h3>Aprendizaje</h3><p>Cada experiencia nos hace mejores en lo que hacemos.</p></div>
+      <div class="pillar"><span class="pillar__num">03</span><h3>Mejora continua</h3><p>Nuestros estándares evolucionan con cada operación.</p></div>
+      <div class="pillar"><span class="pillar__num">04</span><h3>Excelencia</h3><p>El detalle no es un extra. Es nuestro punto de partida.</p></div>
+    </div>
+
+    <blockquote class="pull-quote">
+      “Seleccionamos cada vehículo como si lo fuésemos a manejar nosotros. Ese es el estándar Hansei.”
+      <cite>— HANSEI AUTOMOTORES</cite>
+    </blockquote>
+
+    <div class="values">
+      <div class="value"><span class="value__icon">◈</span><h3>Selección Rigurosa</h3><p>Solo aceptamos vehículos que superan nuestros estándares de calidad, historial y condición mecánica.</p></div>
+      <div class="value"><span class="value__icon">◎</span><h3>Transparencia Total</h3><p>Información completa, documentación en regla y sin costos ocultos. Lo que ves es lo que recibís.</p></div>
+      <div class="value"><span class="value__icon">◇</span><h3>Atención Premium</h3><p>Asesoramiento personalizado de principio a fin. No somos vendedores. Somos asesores de confianza.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TASACIÓN ============ -->
+<section class="section" id="tasacion">
+  <div class="container">
+    <p class="eyebrow">Tasación sin cargo</p>
+    <h2 class="section__title">Tasá tu vehículo</h2>
+    <p class="section__lead">Recibí una valoración profesional, transparente y sin compromiso. Analizamos cada vehículo con el mismo criterio de selección que define a Hansei.</p>
+    <div class="hero__cta">
+      <a href="#tasa-form" class="btn btn--primary">Solicitar Tasación</a>
+      <a href="https://api.whatsapp.com/send/?phone=5491169024795&text=Hola%20Norberto%2C%20quiero%20solicitar%20una%20tasaci%C3%B3n%20%F0%9F%9A%97" target="_blank" rel="noopener" class="btn btn--ghost">Consultar por WhatsApp</a>
+    </div>
+
+    <!-- Cómo funciona -->
+    <div class="how">
+      <p class="eyebrow">El proceso</p>
+      <h3 class="section__subtitle">¿Cómo funciona?</h3>
+      <p class="section__lead">Simple, transparente y sin vueltas. Cuatro pasos para conocer el valor real de tu vehículo.</p>
+      <div class="steps">
+        <div class="step"><span class="step__num">01</span><h4>Completá los datos</h4><p>Completá los datos de tu vehículo en el formulario. Solo te lleva unos minutos.</p></div>
+        <div class="step"><span class="step__num">02</span><h4>Adjuntá fotografías</h4><p>Subí fotos del exterior, interior y motor. Cuantas más, mejor valoración recibís.</p></div>
+        <div class="step"><span class="step__num">03</span><h4>Análisis profesional</h4><p>Nuestro equipo analiza cada detalle con criterio de mercado y estándares Hansei.</p></div>
+        <div class="step"><span class="step__num">04</span><h4>Recibís tu propuesta</h4><p>En menos de 2 horas hábiles te enviamos una propuesta clara y personalizada.</p></div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="tasa-form" id="tasa-form">
+      <div class="tasa-form__intro">
+        <p class="eyebrow">Contacto directo</p>
+        <h3 class="section__subtitle">Hablá con nuestro equipo</h3>
+        <p class="section__lead">Tocá el botón, abrís WhatsApp y enviás los datos de tu vehículo. Norberto te responde en menos de 2 horas hábiles.</p>
+        <p class="tasa-form__include-label">Qué incluir en tu mensaje</p>
+        <ul class="tasa-form__include">
+          <li>Marca y modelo</li>
+          <li>Año y versión</li>
+          <li>Kilómetros</li>
+          <li>Estado general</li>
+          <li>Combustible y transmisión</li>
+          <li>Tu nombre y teléfono</li>
+        </ul>
+      </div>
+
+      <form class="form-card" id="tasacionForm">
+        <div class="form-row">
+          <label>Marca<input type="text" name="marca" required></label>
+          <label>Modelo<input type="text" name="modelo" required></label>
+        </div>
+        <div class="form-row">
+          <label>Versión<input type="text" name="version"></label>
+          <label>Año<input type="number" name="anio" min="1990" max="2027" required></label>
+        </div>
+        <div class="form-row">
+          <label>Kilómetros<input type="number" name="km" required></label>
+          <label>Patente<input type="text" name="patente"></label>
+        </div>
+        <div class="form-row">
+          <label>Transmisión
+            <select name="transmision">
+              <option value="Automática">Automática</option>
+              <option value="Manual">Manual</option>
+            </select>
+          </label>
+          <label>Combustible
+            <select name="combustible">
+              <option value="Nafta">Nafta</option>
+              <option value="Diesel">Diesel</option>
+              <option value="Híbrido">Híbrido</option>
+              <option value="GNC">GNC</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>Color<input type="text" name="color"></label>
+          <label>Ciudad/Provincia<input type="text" name="ciudad"></label>
+        </div>
+        <label class="form-full">Estado general
+          <select name="estado">
+            <option>Excelente</option>
+            <option>Muy Bueno</option>
+            <option>Bueno</option>
+            <option>Regular</option>
+          </select>
+        </label>
+        <label class="form-full">Equipamiento (cuero, GPS, techo, cámara, etc.)
+          <input type="text" name="equipamiento" placeholder="Ej: Cuero, GPS, Techo, Cámara, Service Oficial">
+        </label>
+        <div class="form-row">
+          <label>Nombre y Apellido<input type="text" name="nombre" required></label>
+          <label>Teléfono / WhatsApp<input type="tel" name="telefono" required></label>
+        </div>
+        <label class="form-full">Email<input type="email" name="email"></label>
+        <label class="form-full">Comentarios<textarea name="comentarios" rows="3"></textarea></label>
+
+        <button type="submit" class="btn btn--primary btn--block">Enviar tasación por WhatsApp</button>
+        <p class="form-note">Sin cargo · Sin compromiso · Respuesta en menos de 2 hs hábiles</p>
+      </form>
+    </div>
+
+    <!-- Por qué elegirnos -->
+    <div class="why">
+      <p class="eyebrow">Por qué elegirnos</p>
+      <h3 class="section__subtitle">La diferencia Hansei</h3>
+      <div class="why__grid">
+        <div class="why__item"><h4>Valoración profesional</h4><p>Cada vehículo es analizado por especialistas con años de experiencia en el mercado Toyota.</p></div>
+        <div class="why__item"><h4>Proceso transparente</h4><p>Te explicamos cada factor que determina el valor. Sin sorpresas, sin letra chica.</p></div>
+        <div class="why__item"><h4>Respuesta rápida</h4><p>En menos de 2 horas hábiles tenés una propuesta real. No te hacemos esperar.</p></div>
+      </div>
+    </div>
+
+    <!-- Testimonios tasación -->
+    <div class="testimonials">
+      <p class="eyebrow">Experiencias</p>
+      <h3 class="section__subtitle">Lo que dicen quienes tasaron con nosotros</h3>
+      <div class="testimonial-grid">
+        <blockquote class="testimonial">
+          <p class="stars">★★★★★</p>
+          <p>"Tasé mi Corolla en menos de una hora. La propuesta fue justa y sin vueltas. Terminé vendiendo y comprando con HANSEI."</p>
+          <cite>Rodrigo M. — Toyota Corolla 2021</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p class="stars">★★★★★</p>
+          <p>"Lo que más me sorprendió fue la claridad. Me explicaron todo. Otras agencias simplemente te dicen un número sin justificarlo."</p>
+          <cite>Valeria G. — Toyota RAV4 2022</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p class="stars">★★★★★</p>
+          <p>"Rápido, profesional y sin presiones. La tasación llegó en hora y media. Precio justo y proceso impecable."</p>
+          <cite>Hernán P. — Toyota Hilux 2023</cite>
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h3 class="section__subtitle">Respondemos tus dudas</h3>
+      <div class="faq-list" id="faqList">
+        <div class="faq-item">
+          <button class="faq-q">¿La tasación tiene algún costo? <span>+</span></button>
+          <div class="faq-a"><p>No. La tasación de HANSEI AUTOMOTORES es completamente gratuita y sin ningún tipo de compromiso. Podés solicitarla y evaluar nuestra propuesta sin obligación de vender.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">¿Cuánto demora el proceso? <span>+</span></button>
+          <div class="faq-a"><p>Una vez que recibimos tu formulario completo, nuestro equipo analiza tu vehículo y te envía una propuesta en menos de 2 horas hábiles.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">¿Debo llevar el vehículo? <span>+</span></button>
+          <div class="faq-a"><p>No es necesario en una primera instancia. Con las fotos y los datos del formulario realizamos una tasación inicial. Si avanzamos, coordinamos una inspección presencial.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">¿Compran vehículos con financiación pendiente? <span>+</span></button>
+          <div class="faq-a"><p>Sí, trabajamos con vehículos prendados. En la consulta inicial te explicamos cómo funciona el proceso de cancelación y transferencia.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">¿Aceptan permutas? <span>+</span></button>
+          <div class="faq-a"><p>Sí. Podés dejar tu vehículo como parte de pago por cualquiera de los autos de nuestro stock. Coordinamos la tasación y la diferencia de precio en una sola operación.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="final-cta">
+      <p class="eyebrow">Empezá ahora</p>
+      <h3 class="section__subtitle">Comenzá hoy mismo.</h3>
+      <p class="section__lead">Nuestro equipo analizará tu vehículo y te brindará una propuesta clara, transparente y personalizada.</p>
+      <div class="hero__cta">
+        <a href="#tasa-form" class="btn btn--primary">Solicitar Tasación</a>
+        <a href="https://api.whatsapp.com/send/?phone=5491169024795&text=Hola%20Norberto%2C%20quiero%20solicitar%20una%20tasaci%C3%B3n%20%F0%9F%9A%97" target="_blank" rel="noopener" class="btn btn--ghost">Hablar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINANCIACIÓN ============ -->
+<section class="section section--dark" id="financiacion">
+  <div class="container">
+    <p class="eyebrow">Financiación</p>
+    <h2 class="section__title">Tu próximo Toyota, hoy.</h2>
+    <p class="section__lead">Accedé a las mejores condiciones de financiación del mercado. Planes a medida, sin complicaciones.</p>
+    <p class="section__lead">Simulá tu cuota en tiempo real y conocé cuánto necesitás de anticipo para llevarte el vehículo que elegiste.</p>
+    <a href="#asesores" class="btn btn--primary">Hablar con un asesor</a>
+
+    <div class="simulator">
+      <h3>Simulador de Financiación</h3>
+
+      <div class="sim-row">
+        <div class="sim-label"><span>Valor del vehículo</span><span id="valorOut">USD 30.000</span></div>
+        <input type="range" id="valorRange" min="10000" max="150000" step="1000" value="30000">
+      </div>
+
+      <div class="sim-row">
+        <div class="sim-label"><span>Anticipo</span><span id="anticipoOut">30%</span></div>
+        <input type="range" id="anticipoRange" min="10" max="70" step="5" value="30">
+      </div>
+
+      <div class="sim-row">
+        <div class="sim-label"><span>Cuotas</span><span id="cuotasOut">36 meses</span></div>
+        <input type="range" id="cuotasRange" min="12" max="60" step="6" value="36">
+      </div>
+
+      <div class="sim-result">
+        <p>Cuota estimada</p>
+        <p class="sim-result__num" id="cuotaOut">USD 583</p>
+      </div>
+      <p class="form-note">* Valores estimativos. Consultar condiciones vigentes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NOSOTROS ============ -->
+<section class="section" id="nosotros">
+  <div class="container">
+    <p class="eyebrow">反省 Filosofía Hansei</p>
+    <p class="eyebrow">Quiénes Somos</p>
+    <h2 class="section__title">Una empresa que trabaja diferente.</h2>
+    <p class="section__lead">HANSEI AUTOMOTORES nació con una convicción: en el mercado automotor argentino faltaba una empresa que priorice la confianza sobre el volumen, la calidad sobre la cantidad.</p>
+    <p class="section__lead">Especialistas en Toyota, ofrecemos usados seleccionados y vehículos 0 km con un estándar de atención y transparencia que no encontrás en ninguna agencia convencional.</p>
+    <p class="section__lead">Cada vehículo que ofrecemos fue revisado, evaluado y seleccionado con el mismo criterio con el que elegiríamos un auto para nosotros.</p>
+
+    <div class="values">
+      <div class="value"><h3>Misión</h3><p>Ofrecer vehículos de calidad con la más alta transparencia y atención personalizada.</p></div>
+      <div class="value"><h3>Visión</h3><p>Ser la referencia premium en vehículos Toyota en Argentina.</p></div>
+      <div class="value"><h3>Confianza</h3><p>Todo lo que decimos, lo sostenemos con hechos y documentación.</p></div>
+      <div class="value"><h3>Excelencia</h3><p>Nunca entregamos algo que no cumpla nuestro propio estándar.</p></div>
+    </div>
+
+    <!-- Equipo -->
+    <div class="team" id="asesores">
+      <p class="eyebrow">Equipo</p>
+      <h3 class="section__subtitle">Asesores Comerciales</h3>
+      <p class="section__lead">Personas reales. Compromiso real. Cada consulta es atendida personalmente.</p>
+      <div class="team-grid">
+        <a class="team-card" href="https://wa.me/5491169024795?text=Hola%20Norberto%2C%20me%20comunico%20desde%20la%20web%20de%20HANSEI" target="_blank" rel="noopener">
+          <span class="team-card__avatar">N</span>
+          <span class="team-card__name">Norberto</span>
+          <span class="team-card__role">Asesor Comercial</span>
+          <span class="team-card__contact">💬 +54 9 11 6902-4795</span>
+        </a>
+        <a class="team-card" href="tel:+5491150613281">
+          <span class="team-card__avatar">S</span>
+          <span class="team-card__name">Sebastián</span>
+          <span class="team-card__role">Asesor Comercial</span>
+          <span class="team-card__contact">📞 +54 9 11 5061-3281</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Testimonios generales -->
+    <div class="testimonials">
+      <p class="eyebrow">Lo que dicen nuestros clientes</p>
+      <h3 class="section__subtitle">Experiencias reales</h3>
+      <div class="testimonial-grid">
+        <blockquote class="testimonial">
+          <p class="stars">★★★★★</p>
+          <p>"Compré mi Hilux a través de HANSEI y la experiencia fue completamente diferente a cualquier concesionaria que conocía. Claridad absoluta, sin presiones y el auto tal como me lo describieron."</p>
+          <cite>Martín R. — Toyota Hilux SRX 2023</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p class="stars">★★★★★</p>
+          <p>"Lo que más valoro es la transparencia. Me mostraron todo, me explicaron todo, y el precio fue justo. No creía que comprar un auto podía ser así de fácil."</p>
+          <cite>Carolina M. — Toyota Corolla Cross Hybrid 2023</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p class="stars">★★★★★</p>
+          <p>"Calidad, seriedad y respeto. Tres palabras que definen perfectamente a HANSEI. Ya les recomendé el servicio a tres amigos."</p>
+          <cite>Diego F. — Toyota RAV4 Hybrid 2025</cite>
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="final-cta">
+      <h3 class="section__subtitle">¿Listo para encontrar tu próximo Toyota?</h3>
+      <p class="section__lead">Hablá con nuestros asesores hoy.</p>
+      <a href="https://wa.me/5491169024795?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20HANSEI%20AUTOMOTORES" target="_blank" rel="noopener" class="btn btn--primary">Contactar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="section section--dark" id="contacto">
+  <div class="container">
+    <p class="eyebrow">Contacto</p>
+    <h2 class="section__title">Hablemos</h2>
+    <p class="section__lead">Estamos para acompañarte en cada paso. Ya sea que quieras comprar, vender, o simplemente consultar.</p>
+
+    <div class="contact-grid">
+      <ul class="contact-list">
+        <li><a href="https://wa.me/5491169024795" target="_blank" rel="noopener"><span>💬</span> WhatsApp · Norberto<br><small>+54 9 11 6902-4795</small></a></li>
+        <li><a href="tel:+5491150613281"><span>📞</span> Teléfono · Sebastián<br><small>+54 9 11 5061-3281</small></a></li>
+        <li><a href="https://instagram.com/hansei.automotores" target="_blank" rel="noopener"><span>◎</span> Instagram<br><small>@hansei.automotores</small></a></li>
+        <li><a href="https://facebook.com" target="_blank" rel="noopener"><span>◈</span> Facebook<br><small>HANSEI AUTOMOTORES</small></a></li>
+        <li><a href="mailto:contacto@hansei.com.ar"><span>✉</span> Email<br><small>contacto@hansei.com.ar</small></a></li>
+      </ul>
+
+      <form class="form-card" id="contactForm">
+        <p class="tasa-form__include-label">Envianos un mensaje</p>
+        <label class="form-full">Nombre<input type="text" name="nombre" required></label>
+        <label class="form-full">WhatsApp / Teléfono<input type="tel" name="telefono" required></label>
+        <label class="form-full">Email<input type="email" name="email"></label>
+        <label class="form-full">¿En qué podemos ayudarte?
+          <select name="motivo">
+            <option>Comprar un vehículo</option>
+            <option>Vender / Tasar mi vehículo</option>
+            <option>Financiación</option>
+            <option>Otra consulta</option>
+          </select>
+        </label>
+        <label class="form-full">Mensaje<textarea name="mensaje" rows="4" required></textarea></label>
+        <button type="submit" class="btn btn--primary btn--block">Enviar mensaje</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <p class="footer__mark">◎</p>
+      <p class="footer__name">HANSEI<br>AUTOMOTORES</p>
+      <p class="footer__desc">No vendemos autos. Seleccionamos los mejores. Especialistas en Toyota, con filosofía japonesa de excelencia y confianza.</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Navegación</h4>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#filosofia">Filosofía</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#tasacion">Tasación</a>
+      <a href="#financiacion">Financiación</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Vehículos</h4>
+      <a href="#catalogo">Toyota 0 km</a>
+      <a href="#catalogo">Usados Seleccionados</a>
+      <a href="#catalogo">Hilux</a>
+      <a href="#catalogo">Land Cruiser</a>
+      <a href="#catalogo">RAV4</a>
+      <a href="#catalogo">Corolla</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Redes Sociales</h4>
+      <div class="footer__social">
+        <a href="https://wa.me/5491169024795" target="_blank" rel="noopener">W</a>
+        <a href="https://instagram.com/hansei.automotores" target="_blank" rel="noopener">In</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener">Fb</a>
+      </div>
+      <a class="footer__phone" href="https://wa.me/5491169024795">+54 9 11 6902-4795</a>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <p>© 2026 HANSEI AUTOMOTORES. Todos los derechos reservados.</p>
+    <div class="footer__legal">
+      <a href="#">Política de Privacidad</a>
+      <a href="#">Términos y Condiciones</a>
+      <a href="#">Aviso Legal</a>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5491169024795?text=Hola%2C%20me%20comunico%20desde%20la%20web%20de%20HANSEI%20AUTOMOTORES" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+<button class="back-to-top" id="backToTop" aria-label="Volver arriba">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
